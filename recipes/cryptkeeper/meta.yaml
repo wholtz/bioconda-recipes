@@ -14,7 +14,7 @@ build:
     - cryptkeeper = cryptkeeper.cryptkeeper:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vvv --no-deps --no-build-isolation --no-cache-dir
-  number: 0
+  number: 1
   run_exports:
      - {{ pin_subpackage("cryptkeeper", max_pin="x") }}
 
@@ -24,6 +24,7 @@ requirements:
     - pip
   run:
     - python >=3.9
+    - transtermhp
     - ostir
     - rhotermpredict
     - promotercalculator
